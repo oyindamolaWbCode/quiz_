@@ -13,6 +13,51 @@ const btn_submit = document.getElementById("submit");
 
 // set Questions
 
-const quizData{
-    
-}
+const quizData = [
+    {
+        Questions: "Which language runs in a web browser?",
+        A: "Python",
+        B: "Java",
+        C: "JavaScript",
+        D: "PHP",
+    },
+
+    {
+        Questions: "HTML means ?",
+        A: "HyperText Marking Mathematical Language",
+        B: "HyperTest Marknp Language",
+        C: "HyperText Markup Language",
+        D: "HyperTexture Markup Language",
+        correct: "C",
+
+    },
+
+    {
+        Questions: "javaScript is ?",
+        A: "Procedual Language",
+        B: "Object Oriented",
+        C: "Informative Language",
+        D: "Functional Programming",
+        correct: "B",
+    },
+
+    {
+        Questions: "What does CSS stand for?",
+        A: "Cascading Simple Sheets",
+        B: "Cascading Style Sheets",
+        C: "Central Style Sheets",
+        D: "Cars SUVs Sailboats",
+        correct: "B",
+
+    },
+
+    {
+
+        Questions: "What year was JavaScript launched?",
+        A: "1996",
+        B: "1995",
+        C: "1994",
+        D: "none of the above",
+        correct: "B",
+    }
+]

@@ -4,7 +4,7 @@ const quizContainer = document.querySelector(".quiz-container");
 const quizHeader = document.querySelector(".quiz-header");
 const questionEl = document.getElementById("question");
 const quiz = document.getElementById("quiz");
-const answerEl = document.getElementsByClassName("answer");
+const answerEls = document.getElementsByClassName("answer");
 const a_text = document.getElementById("a_text");
 const b_text = document.getElementById("b_text");
 const c_text = document.getElementById("c_text");
@@ -59,5 +59,34 @@ const quizData = [
         C: "1994",
         D: "none of the above",
         correct: "B",
-    }
-]
+    },
+  
+];
+
+let currentQuiz = 0;
+let score = 0;
+
+loadQuiz()
+
+function loadQuiz(){
+    //function for loading questions
+    deselectAnswers()
+    const currentQuizData = quizData[currentQuiz]
+    //display question
+    questionEl.innerText = currentQuizData.question
+    //present the options
+    a_text.innerText = currentQuizData.A
+    b_text.innerText = currentQuizData.B
+    c_text.innerText = currentQuizData.C
+    d_text.innerText = currentQuizData.D
+
+}
+
+function deselectAnswers(){
+    // function for wrong answer
+    answerEls.forEach(answerEl => answerEl.checked = false)
+}
+
+function getSelected(){
+    //for correct answers
+}

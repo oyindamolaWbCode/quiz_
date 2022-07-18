@@ -73,7 +73,7 @@ function loadQuiz(){
     deselectAnswers()
     const currentQuizData = quizData[currentQuiz]
     //display question
-    questionEl.innerText = currentQuizData.question
+    questionEl.innerText = currentQuizData.Questions
     //present the options
     a_text.innerText = currentQuizData.A
     b_text.innerText = currentQuizData.B
@@ -89,4 +89,37 @@ function deselectAnswers(){
 
 function getSelected(){
     //for correct answers
+    let answer
+    answerEls.forEach(answerEl =>{
+        if(answerEl.checked){
+            answer = answerEl.id
+        }
+    })
+    return answer
 }
+
+//button action when clicked
+
+btn_submit.addEventListener('click', ()=>{
+    const answer = getSelected()
+    if(answer){
+        if(answer === quizData[currentQuiz].correct){
+            score++;
+        }
+        //load new quiz after one as been answered
+        currentQuiz++
+        if(currentQuiz < quizData.length){
+            loadQuiz()
+        }else{
+            //show scores when all quiz has been attempted
+
+            quiz.innerHTML = `
+            <h2> You answered ${score}/${quizData.length} questions correctly</h2>
+
+            <button onclick = "location.reload()">Reload</button>
+
+            `
+            
+        }
+    }
+})

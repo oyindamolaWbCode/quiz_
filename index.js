@@ -4,12 +4,12 @@ const quizContainer = document.querySelector(".quiz-container");
 const quizHeader = document.querySelector(".quiz-header");
 const questionEl = document.getElementById("question");
 const quiz = document.getElementById("quiz");
-const answerEls = document.getElementsByClassName("answer");
+const answerEls = document.querySelectorAll("answer");
 const a_text = document.getElementById("a_text");
 const b_text = document.getElementById("b_text");
 const c_text = document.getElementById("c_text");
 const d_text = document.getElementById("d_text");
-const btn_submit = document.getElementById("submit");
+const btnSubmit = document.getElementById("submit");
 
 // set Questions
 
@@ -20,6 +20,7 @@ const quizData = [
         B: "Java",
         C: "JavaScript",
         D: "PHP",
+        correct: "C"
     },
 
     {
@@ -85,30 +86,33 @@ function loadQuiz(){
 function deselectAnswers(){
     // function for wrong answer
     answerEls.forEach(answerEl => answerEl.checked = false)
-}
+};
 
 function getSelected(){
     //for correct answers
-    let answer
+     let answer =
     answerEls.forEach(answerEl =>{
         if(answerEl.checked){
             answer = answerEl.id
         }
-    })
+    });
     return answer
-}
+};
 
 //button action when clicked
 
-btn_submit.addEventListener('click', ()=>{
+btnSubmit.addEventListener('click', () => {
     const answer = getSelected()
     if(answer){
         if(answer === quizData[currentQuiz].correct){
+
             score++;
-        }
+        };
         //load new quiz after one as been answered
-        currentQuiz++
+        currentQuiz++;
+
         if(currentQuiz < quizData.length){
+
             loadQuiz()
         }else{
             //show scores when all quiz has been attempted
@@ -120,6 +124,7 @@ btn_submit.addEventListener('click', ()=>{
 
             `
             
-        }
-    }
-})
+        };
+    };
+    console.log("submit button clicked!");
+});

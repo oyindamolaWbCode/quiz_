@@ -1,21 +1,22 @@
+const closeQuiz = document.querySelector(".quiz-container").style.display = 'none';
 // grt the DOM
 
 const quizContainer = document.querySelector(".quiz-container");
 const quizHeader = document.querySelector(".quiz-header");
 const questionEl = document.getElementById("question");
 const quiz = document.getElementById("quiz");
-const answerEls = document.querySelectorAll("answer");
+const answerEls = document.querySelectorAll(".answer");
 const a_text = document.getElementById("a_text");
 const b_text = document.getElementById("b_text");
 const c_text = document.getElementById("c_text");
 const d_text = document.getElementById("d_text");
-const btnSubmit = document.getElementById("submit");
+const btnSubmit = document.getElementById("submit")
 
-// set Questions
+// set Questions in objects
 
 const quizData = [
     {
-        Questions: "Which language runs in a web browser?",
+        Question: "Which language runs in a web browser?",
         A: "Python",
         B: "Java",
         C: "JavaScript",
@@ -24,7 +25,7 @@ const quizData = [
     },
 
     {
-        Questions: "HTML means ?",
+        Question: "HTML means ?",
         A: "HyperText Marking Mathematical Language",
         B: "HyperTest Marknp Language",
         C: "HyperText Markup Language",
@@ -34,7 +35,7 @@ const quizData = [
     },
 
     {
-        Questions: "javaScript is ?",
+        Question: "javaScript is ?",
         A: "Procedual Language",
         B: "Object Oriented",
         C: "Informative Language",
@@ -43,7 +44,7 @@ const quizData = [
     },
 
     {
-        Questions: "What does CSS stand for?",
+        Question: "What does CSS stand for?",
         A: "Cascading Simple Sheets",
         B: "Cascading Style Sheets",
         C: "Central Style Sheets",
@@ -54,7 +55,7 @@ const quizData = [
 
     {
 
-        Questions: "What year was JavaScript launched?",
+        Question: "What year was JavaScript launched?",
         A: "1996",
         B: "1995",
         C: "1994",
@@ -74,7 +75,7 @@ function loadQuiz(){
     deselectAnswers()
     const currentQuizData = quizData[currentQuiz]
     //display question
-    questionEl.innerText = currentQuizData.Questions
+    questionEl.innerText = currentQuizData.Question
     //present the options
     a_text.innerText = currentQuizData.A
     b_text.innerText = currentQuizData.B
@@ -90,7 +91,7 @@ function deselectAnswers(){
 
 function getSelected(){
     //for correct answers
-     let answer =
+     let answer 
     answerEls.forEach(answerEl =>{
         if(answerEl.checked){
             answer = answerEl.id

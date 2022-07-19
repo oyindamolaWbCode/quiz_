@@ -1,6 +1,7 @@
 const closeQuiz = document.querySelector(".quiz-container").style.display = 'none';
 // grt the DOM
-
+const firstPageContainer = document.querySelector(".firstPage-container");
+const toQuiz = document.getElementById("to-quiz");
 const quizContainer = document.querySelector(".quiz-container");
 const quizHeader = document.querySelector(".quiz-header");
 const questionEl = document.getElementById("question");
@@ -12,8 +13,14 @@ const c_text = document.getElementById("c_text");
 const d_text = document.getElementById("d_text");
 const btnSubmit = document.getElementById("submit")
 
-// set Questions in objects
+// add an event-listener to return quiz
 
+toQuiz.addEventListener('click',() =>{
+    firstPageContainer.style.display = 'none';
+    quizContainer.style.display = 'block';
+})
+
+// set Questions in objects
 const quizData = [
     {
         Question: "Which language runs in a web browser?",

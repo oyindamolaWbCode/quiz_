@@ -4,13 +4,14 @@ const quizContainer = document.querySelector(".quiz-container");
 const quizHeader = document.querySelector(".quiz-header");
 const questionEl = document.getElementById("question");
 const quiz = document.getElementById("quiz");
-const answerEls = document.querySelectorAll("answer");
+const answerEls = document.querySelectorAll(".answer"); //added '.' infront of answer. It skipped you
 const a_text = document.getElementById("a_text");
 const b_text = document.getElementById("b_text");
 const c_text = document.getElementById("c_text");
 const d_text = document.getElementById("d_text");
 const btnSubmit = document.getElementById("submit");
 
+console.log(answerEls)
 // set Questions
 
 const quizData = [
@@ -90,12 +91,14 @@ function deselectAnswers(){
 
 function getSelected(){
     //for correct answers
-     let answer =
+    //  let answer =  this is what you had
+     let answer ; //here's the change i made. 
     answerEls.forEach(answerEl =>{
         if(answerEl.checked){
             answer = answerEl.id
         }
     });
+    // console.log(answerEls)
     return answer
 };
 
@@ -106,8 +109,10 @@ btnSubmit.addEventListener('click', () => {
     if(answer){
         if(answer === quizData[currentQuiz].correct){
 
-            score++;
+            // score++;   // for some reason, the score does not update when it's here but updates out of here. 
         };
+        score++;  // also the score keeps updating even if the answer is incorrect. please have a look and see.
+        // console.log(score)
         //load new quiz after one as been answered
         currentQuiz++;
 

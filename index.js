@@ -18,7 +18,7 @@ const btnSubmit = document.getElementById("submit")
 toQuiz.addEventListener('click',() =>{
     firstPageContainer.style.display = 'none';
     quizContainer.style.display = 'block';
-})
+});
 
 // set Questions in objects
 const quizData = [
@@ -28,7 +28,7 @@ const quizData = [
         B: "Java",
         C: "JavaScript",
         D: "PHP",
-        correct: "C"
+        Correct: "C"
     },
 
     {
@@ -37,7 +37,7 @@ const quizData = [
         B: "HyperTest Marknp Language",
         C: "HyperText Markup Language",
         D: "HyperTexture Markup Language",
-        correct: "C",
+        Correct: "C",
 
     },
 
@@ -47,7 +47,7 @@ const quizData = [
         B: "Object Oriented",
         C: "Informative Language",
         D: "Functional Programming",
-        correct: "B",
+        Correct: "B",
     },
 
     {
@@ -56,7 +56,7 @@ const quizData = [
         B: "Cascading Style Sheets",
         C: "Central Style Sheets",
         D: "Cars SUVs Sailboats",
-        correct: "B",
+        Correct: "B",
 
     },
 
@@ -67,13 +67,68 @@ const quizData = [
         B: "1995",
         C: "1994",
         D: "none of the above",
-        correct: "B",
+        Correct: "B",
+    },
+
+    
+    {
+
+        Question: " - is distributed version control system in the world",
+        A: "Vscode",
+        B: "GitHub",
+        C: "Git",
+        D: "Git Bash",
+        Correct: "C",
+    },
+
+    
+    {
+
+        Question: "Git was created by who and in what year?",
+        A: "Ada, 2004",
+        B: "Linus Tovard 2005",
+        C: "Brendan Eich 2005",
+        D: "Linus Torvalds, 2005",
+        Correct: "D",
+    },
+
+    
+    {
+
+        Question: " Pointing to a woman, a man said, 'Her father is the only son of my father.' How is the man related to the woman?",
+        A: "Father",
+        B: "Son",
+        C: "Grandfather",
+        D: "Brother",
+        Correct: "A",
+    },
+
+    
+    {
+
+        Question: " Pointing to an image Madhu tells Sohan, 'I am the only daughter of this lady, and her son is your maternal uncle.' How is the Madhu related to Sohan's father?",
+        A: "None of the above",
+        B: "Sister-In-law",
+        C: "Sister",
+        D: "Wife",
+        Correct: "D",
+    },
+
+      
+    {
+
+        Question: "Sunil is the brother of Anil. Anil is the son of Sohan. Meena is Sohan's mother. How is Sunil related to Meena?",
+        A: "Grandson",
+        B: "Brother",
+        C: "Son",
+        D: "Grandfather",
+        Correct: "A",
     },
   
 ];
 
-let currentQuiz = 0;
-let score = 0;
+let currentQuiz = 0
+let score = 0
 
 loadQuiz()
 
@@ -112,12 +167,13 @@ function getSelected(){
 btnSubmit.addEventListener('click', () => {
     const answer = getSelected()
     if(answer){
-        if(answer === quizData[currentQuiz].correct){
-
-            score++;
-        };
+        
+        if(answer == quizData[currentQuiz].Correct){
+             
+           score++
+        }
         //load new quiz after one as been answered
-        currentQuiz++;
+        currentQuiz++
 
         if(currentQuiz < quizData.length){
 

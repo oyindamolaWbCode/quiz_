@@ -33,8 +33,10 @@ body{
     background-image: linear-gradient(to left, rgb(130, 130, 226), rgb(196, 186, 186));
 }
 
+/* ends here */
+
 .quiz-container{
-    background-color: #fff;
+    background-image:linear-gradient(to left, rgb(149, 148, 148), rgb(196, 186, 186));
     border-radius: 10px;
     box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1);
     width: 600px;
@@ -63,8 +65,8 @@ ul li{
 }
 
 button{
-    background-color: #03cae4;
-    color: #fff;
+    background-image: linear-gradient(to left, #fff, rgb(210, 174, 222));
+    color: rgb(46, 44, 44);
     border: none;
     display: block;
     width: 100%;

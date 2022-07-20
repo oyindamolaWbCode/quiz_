@@ -45,9 +45,9 @@ const quizData = [
         Question: "javaScript is ?",
         A: "Procedual Language",
         B: "Object Oriented",
-        C: "Informative Language",
+        C: "Object Based",
         D: "Functional Programming",
-        Correct: "B",
+        Correct: "C",
     },
 
     {
@@ -117,12 +117,56 @@ const quizData = [
       
     {
 
-        Question: "Sunil is the brother of Anil. Anil is the son of Sohan. Meena is Sohan's mother. How is Sunil related to Meena?",
-        A: "Grandson",
-        B: "Brother",
-        C: "Son",
-        D: "Grandfather",
-        Correct: "A",
+        Question: " Which of the following variables takes precedence over the others if the names are the same?",
+        A: "Global variable",
+        B: "The local element",
+        C: "The two of the above",
+        D: "None of the above",
+        Correct: "",
+    },
+
+        
+    {
+
+        Question: "Which one of the following also known as Conditional Expression:?",
+        A: "Alternative to if-else",
+        B: "Switch statement",
+        C: "If-then-else statement",
+        D: "immediate if",
+        Correct: "D",
+    },
+
+        
+    {
+
+        Question: " In JavaScript, what is a block of statement?",
+        A: "Conditional block",
+        B: "block that combines a number of statements into a single compound statement",
+        C: "both conditional block and a single statement",
+        D: "block that contains a single statement",
+        Correct: "B",
+    },
+
+        
+    {
+
+        Question: " The 'function' and 'var' are known as:?",
+        A: "Keywords",
+        B: "Data Types",
+        C: "Declaration statement",
+        D: "Prototypes",
+        Correct: "C",
+    },
+
+        
+    {
+
+        Question: "Which of the following givenfunctions of the Number Object formats a number with a different number of digits to the right of the decimal ?",
+        A: "toExponential()",
+        B: "toPrecision()",
+        C: "toLocaleString()",
+        D: "toFixed()",
+        Correct: "D",
     },
   
 ];
